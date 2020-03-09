@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Exemplo de formulário para o Show me the Leads</h1>
+      <form method="POST" action="https://smtl.gama.academy/leads/4a6b3a44-5ffc-11ea-92b8-cb0262e26cca">
+        <input
+          name="name"
+          type="text"
+          pattern="^\D{2,}\s[\D\s]{2,}$"
+          title="Digite seu nome completo"
+          required
+        />
+        <input
+          name="email"
+          type="email"
+          title="Digite um email válido"
+          required
+        />
+        <input name="redirectTo" type="hidden" value="https://gama.academy" />
+        <input name="debugMode" type="hidden" value="true" />
+        <input type="submit" />
+      </form>
     </div>
   );
 }
