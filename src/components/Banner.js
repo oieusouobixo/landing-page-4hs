@@ -12,12 +12,14 @@ function Banner() {
                         type="text"
                         pattern="^\D{2,}\s[\D\s]{2,}$"
                         title="Digite seu nome completo"
+                        placeholder="Digite seu nome completo"
                         required
                     />
                     <input
                         name="email"
                         type="email"
                         title="Digite um email válido"
+                        placeholder="Digite seu e-mail"
                         required
                     />
                     <input name="redirectTo" type="hidden" value="https://gama.academy" />
